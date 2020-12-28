@@ -7,34 +7,34 @@ import main as x
 #importing the main file("code" is the name of the file I have used) as a library 
 
 
-x.create("sastra",25)
+x.create("menu",39)
 #to create a key with key_name,value given and with no time-to-live property
 
 
-x.create("src",70,3600) 
+x.create("star",70,3600) 
 #to create a key with key_name,value given and with time-to-live property value given(number of seconds)
 
 
-x.read("sastra")
+x.read("menu")
 #it returns the value of the respective key in Jasonobject format 'key_name:value'
 
 
-x.read("src")
+x.read("star")
 #it returns the value of the respective key in Jasonobject format if the TIME-TO-LIVE IS NOT EXPIRED else it returns an ERROR
 
 
-x.create("sastra",50)
+x.create("menu",50)
 #it returns an ERROR since the key_name already exists in the database
 #To overcome this error 
 #either use modify operation to change the value of a key
 #or use delete operation and recreate it
 
 
-x.modify("sastra",55)
+x.modify("menu",55)
 #it replaces the initial value of the respective key with new value 
 
  
-x.delete("sastra")
+x.delete("menu")
 #it deletes the respective key and its value from the database(memory is also freed)
 
 #we can access these using multiple threads like
